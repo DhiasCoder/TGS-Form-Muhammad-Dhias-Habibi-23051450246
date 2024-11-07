@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Form</title>
+  </head>
+  <body>
+    <form id="firstForm" action="Biodata.html" method="get">
+      <table
+        border="3"
+        align="center"
+        bgcolor="blanchedalmond"
+        cellpadding="10px"
+        cellspacing="20px"
+        rules="all"
+        width="70%"
+      >
+        <thead>
+          <tr>
+            <td bgcolor="grey" colspan="2" align="center">
+              <h1 style="color: black">Formulir Pendaftaran</h1>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label for="lblNama"> <b>Nama Lengkap</b></label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="txtNama"
+                id="txtNama"
+                maxlength="50"
+                placeholder="Isi Nama Lengkap"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lblPassword"><b>Password</b></label>
+            </td>
+            <td>
+              <label for="show_password">
+                <input id="show_password" type="checkbox" />
+                Tampilkan Password
+              </label>
+              <input
+                type="password"
+                name="txtPass"
+                id="txtPass"
+                size="50"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lblEmail"><b>Email</b></label>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="@gmail.com"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="tgl"><b>Tanggal Lahir</b></label>
+            </td>
+            <td>
+              <input type="Date" name="tgl" id="tgl" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lbljk"><b>Jenis Kelamin </b></label>
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="jk"
+                id="jk"
+                value="Pria"
+                checked
+                required
+              />
+              Pria
+              <input type="radio" name="jk" id="jk" value="Wanita" required />
+              Wanita
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lblhbi"><b>Hobi</b></label>
+            </td>
+            <td>
+              <input type="checkbox" name="hbi" id="hbi" value="Browsing" />
+              Browsing
+              <input type="checkbox" name="hbi" id="hbi" value="Searching" />
+              Searching
+              <input type="checkbox" name="hbi" id="hbi" value="Gamming" />
+              Gamming <br />
+              <input type="checkbox" name="hbi" id="hbi" value="Watching" />
+              Watching
+              <input type="checkbox" name="hbi" id="hbi" value="Programming" />
+              Programming
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="alamat"><b>Alamat</b></label>
+            </td>
+            <td>
+              <textarea
+                name="alamat"
+                id="alamat"
+                rows="5"
+                cols="30"
+                required
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="agama"><b>Agama</b></label>
+            </td>
+            <td>
+              <select name="agama" id="agama" required>
+                <option value="">Pilih salah satu</option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Budha">Budha</option>
+                <option value="Konghucu">Konghucu</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="foto"><b>Foto</b></label>
+            </td>
+            <td>
+              <input type="file" id="foto" name="foto" required />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2" align="center" bgcolor="grey">
+              <button type="submit">Submit</button>
+              <button type="reset">Batal</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+    <script>
+      const inputPassword = document.getElementById("txtPass");
+      const showPassword = document.getElementById("show_password");
+      showPassword.addEventListener("input", (e) => {
+        if (e.target.checked) {
+          inputPassword.setAttribute("type", "text");
+        } else {
+          inputPassword.setAttribute("type", "password");
+        }
+      });
+    </script>
+  </body>
+</html>
